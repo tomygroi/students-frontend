@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Estudiantes</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <main class="container">
+        <h1>Gestión de Estudiantes</h1>
+
+        <!-- Contenedor para mensajes de estado -->
+        <div id="message" class="message hidden"></div>
+
+        <!-- Formulario -->
+        <form id="student-form" class="card">
+            <div class="form-group">
+                <label for="firstName">Nombre:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Apellido:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Edad:</label>
+                <input type="number" id="age" name="age" min="1" required>
+            </div>
+
+            <div class="button-group">
+                <button type="submit" class="btn btn-save">Guardar</button>
+                <button type="button" id="btn-cancel" class="btn btn-cancel">Cancelar</button>
+            </div>
+        </form>
+
+        <!-- Tabla -->
+        <div class="table-container card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Email</th>
+                        <th>Edad</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="students-table-body">
+                    <!-- Filas dinámicas -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

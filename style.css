@@ -1,0 +1,160 @@
+:root {
+    --bg-color: #f4f6f9;
+    --text-color: #333;
+    --card-bg: #ffffff;
+    --border-color: #dddddd;
+    --primary-color: #2563eb;
+    --cancel-color: #64748b;
+    --success-bg: #d1fae5;
+    --success-text: #065f46;
+    --error-bg: #fee2e2;
+    --error-text: #991b1b;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-save {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-cancel {
+    background-color: var(--cancel-color);
+    color: white;
+}
+
+.btn-edit {
+    background-color: #f59e0b;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.btn-delete {
+    background-color: #ef4444;
+    color: white;
+    padding: 6px 10px;
+    font-size: 12px;
+}
+
+/* Mensajes de Estado (Estilo Pop-up / Toast Flotante) */
+.message {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    min-width: 280px;
+    max-width: 90%;
+    transition: all 0.3s ease-in-out;
+}
+
+.message.hidden {
+    display: none;
+}
+
+/* Verde para Éxito */
+.message.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border: 1px solid #a7f3d0;
+}
+
+/* Rojo para Error */
+.message.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid #fca5a5;
+}
+
+/* Tabla */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #e2e8f0;
+}
+
+/* Filas alternadas (Zebra Striping) */
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #f1f5f9;
+}
