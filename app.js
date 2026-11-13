@@ -5,7 +5,7 @@
     Curso: 7°3°
     */
 
-const API_URL = "http://localhost:8080/api/students";
+const API_URL = "https://students-backend-1.onrender.com/api/students";
 
 // Referencias al DOM
 const tableBody = document.getElementById("students-table-body");
